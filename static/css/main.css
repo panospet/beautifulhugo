@@ -1,7 +1,7 @@
 /* --- General --- */
 
 body {
-  font-family: 'Lora', 'Times New Roman', serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 18px;
   color: #404040;
   position: relative;
@@ -28,9 +28,53 @@ body {
 }
 }
 
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.box p {
+  text-align: center;
+}
+
+.box span {
+  border: none;
+  font-size: 35px;
+  padding-top: 7px;
+}
+
+.box {
+  flex: 1 1 30%;
+  padding: 1em;
+  margin: 1em;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  text-decoration: none;
+  color: white;
+  border-color: #333333;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  background-color: #333333;
+  color: white;
+  text-decoration: none;
+}
+
+.box a {
+  text-decoration: none;
+  color: ghostwhite;
+  font-weight: bold;
+}
+
 p {
-  line-height: 1.5;
+  line-height: 1.8;
   margin: 6px 0;
+  text-align: justify;
+  width: 100%;
 }
 p + p {
     margin: 24px 0 6px 0;
