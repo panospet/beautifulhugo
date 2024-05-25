@@ -8,27 +8,27 @@
           </div>
         {{ end }}
 
-        <div class="posts-list">
-          {{ $pag := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
-          {{ range $pag.Pages }}
-            {{ partial "post_preview" . }}
-          {{ end }}
-        </div>
+          <section class="boxes">
+              <a href="/literature" class="box">
+                  <span class="fa fa-book-open"></span>
+                  <h3>Literature</h3>
+              </a>
+              <a href="/tech" class="box">
+                  <span class="fa fa-keyboard"></span>
+                  <h3>Tech</h3>
+              </a>
+              <a href="https://mixcloud.com/panospet" class="box">
+                  <span class="fab fa-mixcloud"></span>
+                  <h3>Music</h3>
+              </a>
+              <a href="/page/about" class="box">
+                  <span class="fa fa-male"></span>
+                  <h3>About me</h3>
+              </a>
+          </section>
 
-        {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
-          <ul class="pager main-pager">
-            {{ if .Paginator.HasPrev }}
-              <li class="previous">
-                <a href="{{ .Permalink }}page/{{ .Paginator.Prev.PageNumber }}/">&larr; {{ i18n "newerPosts" }}</a>
-              </li>
-            {{ end }}
-            {{ if .Paginator.HasNext }}
-              <li class="next">
-                <a href="{{ .Permalink }}page/{{ .Paginator.Next.PageNumber }}/">{{ i18n "olderPosts" }} &rarr;</a>
-              </li>
-            {{ end }}
-          </ul>
-        {{ end }}
+
+
       </div>
     </div>
   </div>
