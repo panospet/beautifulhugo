@@ -89,6 +89,12 @@ title = "SoundCloud"
 icon = "fab fa-soundcloud"
 
 [[social_icons]]
+id = "mixcloud"
+url = "https://mixcloud.com/%s"
+title = "MixCloud"
+icon = "fab fa-mixcloud"
+
+[[social_icons]]
 id = "spotify"
 url = "https://open.spotify.com/user/%s"
 title = "Spotify"
